@@ -1,7 +1,7 @@
 {
-	"name": "baraja-core/template",
-	"description": "This is a template package.",
-	"homepage": "https://github.com/baraja-core/template",
+	"name": "baraja-core/color",
+	"description": "Normalize HTML colors.",
+	"homepage": "https://github.com/baraja-core/color",
 	"authors": [
 		{
 			"name": "Jan Barášek",
