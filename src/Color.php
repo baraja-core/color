@@ -27,7 +27,7 @@ final class Color
 		if (in_array($format, self::FORMATS, true) === false) {
 			throw new \InvalidArgumentException(
 				'Format "' . $format . '" is not supported. '
-				. 'Did you mean "' . implode('", "', self::FORMATS) . '"?'
+				. 'Did you mean "' . implode('", "', self::FORMATS) . '"?',
 			);
 		}
 
