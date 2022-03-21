@@ -40,13 +40,13 @@ final class Color
 				return '#' . self::canonize($code, $format);
 			}
 		} elseif (str_starts_with($color, '#')) {
-			throw new \InvalidArgumentException('Color "' . $color . '" must contain only [0-9-a-f] characters.');
+			throw new \InvalidArgumentException(sprintf('Color "%s" must contain only [0-9-a-f] characters.', $color));
 		}
 		if (isset(self::$named[$color])) {
 			return self::normalize(self::$named[$color], $format);
 		}
 
-		throw new \InvalidArgumentException('Color "' . $color . '" is not valid CSS color.');
+		throw new \InvalidArgumentException(sprintf('Color "%s" is not valid CSS color.', $color));
 	}
 
 
@@ -70,7 +70,7 @@ final class Color
 			if (count($tokens) >= 3) {
 				return $tokens[0] . $tokens[1] . $tokens[2];
 			}
-			throw new \InvalidArgumentException('Color #' . $code . ' can not be short.');
+			throw new \InvalidArgumentException(sprintf('Color #%s can not be short.', $code));
 		}
 		if (
 			$format === self::FORMAT_LONG
